@@ -7,3 +7,7 @@ euriai
 langchain_community
 sentence-transformers
 python-dotenv
+pytesseract
+pillow
+pdf2image
+pymupdf
