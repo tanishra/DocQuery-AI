@@ -3,7 +3,7 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from typing import List
 
 def create_faiss_index(texts: List[str]) :
-    embeddings = HuggingFaceEmbeddings(model_name = "sentence-transformers/all-mpnet-base-v2")
+    embeddings = HuggingFaceEmbeddings(model_name = "sentence-transformers/all-mpnet-base-v2",model_kwargs={"device": "cpu"})
     return FAISS.from_texts(texts, embeddings)
 
 
