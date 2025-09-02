@@ -13,10 +13,15 @@
 
 ---
 
+## 🔗 Live Demo
+- 🌐 **Streamlit App:** [Link](https://docquery-ai-zm2p7pwwj3hya6gtqrxumf.streamlit.app)
+
+---
+
 ## 🏗️ Tech Stack
 - **Vector Database:** FAISS
 - **Embedding Model:** Hugging Face model (sentence-transformers/all-mpnet-base-v2)
-- **Language Model:** OpenAI GPT (gpt-4.1-mini)
+- **Language Model:** OpenAI GPT (gpt-4.1-nano)
 - **Frontend:** Streamlit 
 - **PDF Parsing:** pypdf + pytesseract (Image Parsing)
 
@@ -35,8 +40,8 @@
 ## ⚡ Installation
 ```bash
 # Clone the repository
-git clone https://github.com/tanishra/medquery-ai.git
-cd medquery-ai
+git clone https://github.com/tanishra/DocQuery-AI.git
+cd docquery
 
 # Create virtual environment
 conda create -n venv 
@@ -58,7 +63,9 @@ streamlit run main.py
 ---
 
 ## 📷 Screenshot
-![User Interface](assets/user_interface.png)
+![User Interface](assets/user-interface.png)
+![User Interface](assets/user-interface%202.png)
+
 ---
 
 ## ✅ Future Enhancements
