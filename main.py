@@ -7,6 +7,8 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from dotenv import load_dotenv
 import os
 import time
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 load_dotenv()
 
@@ -147,7 +149,8 @@ for message in st.session_state.messages:
 # Chat input
 if prompt := st.chat_input("Ask about your medical documents..."):
     # Add user message to chat history
-    timestamp = time.strftime("%H:%M")
+    # timestamp = time.strftime("%H:%M")
+    timestamp = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%H:%M")
     st.session_state.messages.append({
         "role": "user", 
         "content": prompt, 
