@@ -1,9 +1,19 @@
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from typing import List
+import torch
 
-def create_faiss_index(texts: List[str]) :
-    embeddings = HuggingFaceEmbeddings(model_name = "sentence-transformers/all-mpnet-base-v2",model_kwargs={"torch_dtype": "auto", "low_cpu_mem_usage": False})
+def create_faiss_index(texts: List[str]):
+    # Auto-select device: GPU if available, else CPU
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+
+    embeddings = HuggingFaceEmbeddings(
+        model_name="sentence-transformers/all-mpnet-base-v2"
+    )
+
+    # Force full model load on correct device
+    embeddings.client = embeddings.client.to(device)
+
     return FAISS.from_texts(texts, embeddings)
 
 
