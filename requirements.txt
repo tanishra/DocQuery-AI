@@ -12,3 +12,4 @@ pillow
 pdf2image
 pymupdf
 poppler-utils
+torch
