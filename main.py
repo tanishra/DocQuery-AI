@@ -3,7 +3,7 @@ from app.ui import pdf_uploader
 from app.pdf_utils import extract_text_from_pdf
 from app.vectorstore_utils import create_faiss_index,retrive_relevant_docs
 from app.chat_utils import get_chat_model, ask_chat_model
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from dotenv import load_dotenv
 import os
 import time
