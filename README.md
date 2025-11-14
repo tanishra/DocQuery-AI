@@ -14,7 +14,7 @@
 ---
 
 ## 🔗 Live Demo
-- 🌐 **Streamlit App:** [Link](https://docquery-ai-zm2p7pwwj3hya6gtqrxumf.streamlit.app)
+- 🌐 **Streamlit App:** [Link](https://tanishrajput-docqueryai.streamlit.app)
 
 ---
 
